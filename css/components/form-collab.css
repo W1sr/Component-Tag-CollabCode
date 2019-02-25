@@ -1,0 +1,109 @@
+.form-collab {
+    width: 80vw;
+}
+
+.form-collab .label {
+    display: block;
+    position: relative;
+    margin-bottom: var(--spacing-medium);
+}
+.form-collab .label:not(:last-of-type) {
+    margin-bottom: var(--spacing-medium);
+}
+.form-collab .label::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-first);
+    position: absolute;
+    bottom: 1px;
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 200ms linear;
+}
+/* .form-collab .label:focus-within:after, */
+.form-collab .label.-focus::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.form-collab .title {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.form-collab .subtitle {
+    display: block;
+    font-size: 14px;
+    color: var(--color-first);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: var(--spacing-medium);
+}
+
+.form-collab .input {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--color-second);
+    background-color: transparent;
+    height: 2em;
+    font-weight: bold;
+}
+.form-collab .input::selection {
+    background-color: var(--color-first);
+    color: var(--color-zero);
+}
+.form-collab .input:focus,
+.form-collab .input:hover {
+    border-bottom-color: var(--color-first);
+}
+
+.form-collab .tagInput {
+    display: none;
+}
+
+.form-collab .tag {
+    display: inline-block;
+    font-size: 18px;
+    background-color: var(--color-second-light);
+    padding: 8px;
+    cursor: pointer;
+    animation: vibrationNotChecked 300ms linear;
+}
+
+.form-collab .tag::selection {
+    background-color: transparent;
+}
+
+.form-collab .tagInput:checked + .tag {
+    background-color: var(--color-first);
+    color: var(--color-zero);
+    animation: vibrationChecked 300ms linear;
+}
+
+@keyframes vibrationChecked {
+    33% {
+        transform: rotate(10deg);
+    }
+    66% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+@keyframes vibrationNotChecked {
+    33% {
+        transform: rotate(-10deg);
+    }
+    66% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}

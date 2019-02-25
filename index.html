@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/settings/colors.css">
+    <link rel="stylesheet" href="css/settings/spacing.css">
+    <link rel="stylesheet" href="css/tools/styles.css">
+    <link rel="stylesheet" href="css/generic/reset.css">
+    <link rel="stylesheet" href="css/base/styles.css">
+    <link rel="stylesheet" href="css/components/form-collab.css">
+</head>
+<body>
+    <main class="container">
+        <form class="form-collab">
+            <label class="label">
+                <span class="title">Quais assuntos você quer aprender?</span>
+                <span class="subtitle">Você pode selecionar as tags que estão ai ou criar uma nova tag escrevendo o nome dela no campo abaixo e pressionando ENTER</span>
+            <input class="input" type="text" placeholder="Não tem o que você quer? Escreva!">
+            </label>
+
+            <fieldset class="tags">
+                <input class="tagInput" id="frontend" type="checkbox">
+                <label class="tag" for="frontend">FrontEnd</label>
+
+                <input class="tagInput" id="backend" type="checkbox">
+                <label class="tag" for="backend">BackEnd</label>
+            </fieldset>
+        </form>
+    </main>
+    <script src="js/components/form-collab.js"></script>
+</body>
+</html>
